@@ -530,7 +530,7 @@ function! s:MapKeys()
     nnoremap <script> <silent> <nowait> <buffer> n         j
     nnoremap <script> <silent> <nowait> <buffer> r         k
 
-    for k in ["G", "n", "N", "L", "M", "H"]
+    for k in ["G", "L", "M", "H"]
         execute "nnoremap <buffer> <silent>" k ":keepjumps normal!" k."<CR>"
     endfor
 endfunction
