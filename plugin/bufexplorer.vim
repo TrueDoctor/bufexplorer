@@ -527,6 +527,9 @@ function! s:MapKeys()
     nnoremap <script> <silent> <nowait> <buffer> v             :call <SID>SelectBuffer("split", "vr")<CR>
     nnoremap <script> <silent> <nowait> <buffer> V             :call <SID>SelectBuffer("split", "vl")<CR>
 
+    nnoremap <script> <silent> <nowait> <buffer> n         j
+    nnoremap <script> <silent> <nowait> <buffer> r         k
+
     for k in ["G", "n", "N", "L", "M", "H"]
         execute "nnoremap <buffer> <silent>" k ":keepjumps normal!" k."<CR>"
     endfor
