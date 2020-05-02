@@ -516,9 +516,9 @@ function! s:MapKeys()
     nnoremap <script> <silent> <nowait> <buffer> m             :call <SID>MRUListShow()<CR>
     nnoremap <script> <silent> <nowait> <buffer> o             :call <SID>SelectBuffer()<CR>
     nnoremap <script> <silent> <nowait> <buffer> p             :call <SID>ToggleSplitOutPathName()<CR>
-    nnoremap <script> <silent> <nowait> <buffer> q             :call <SID>Close()<CR>
+    nnoremap <script> <silent> <nowait> <buffer> R             :call <SID>Close()<CR>
     nnoremap <script> <silent> <nowait> <buffer> r             :call <SID>SortReverse()<CR>
-    nnoremap <script> <silent> <nowait> <buffer> R             :call <SID>ToggleShowRelativePath()<CR>
+    nnoremap <script> <silent> <nowait> <buffer> P             :call <SID>ToggleShowRelativePath()<CR>
     nnoremap <script> <silent> <nowait> <buffer> s             :call <SID>SortSelect()<CR>
     nnoremap <script> <silent> <nowait> <buffer> S             :call <SID>ReverseSortSelect()<CR>
     nnoremap <script> <silent> <nowait> <buffer> t             :call <SID>SelectBuffer("tab")<CR>
@@ -643,8 +643,8 @@ function! s:CreateHelp()
         call add(header, '" f : open buffer in another window below the current')
         call add(header, '" p : toggle splitting of file and path name')
         call add(header, '" q : quit')
-        call add(header, '" r : reverse sort')
-        call add(header, '" R : toggle showing relative or full paths')
+        call add(header, '" R : reverse sort')
+        call add(header, '" P : toggle showing relative or full paths')
         call add(header, '" s : cycle thru "sort by" fields '.string(s:sort_by).'')
         call add(header, '" S : reverse cycle thru "sort by" fields')
         call add(header, '" T : toggle if to show only buffers for this tab or not')
